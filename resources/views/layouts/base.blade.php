@@ -9,7 +9,10 @@
     <body>
         <div class="container">
             <main>
-                @yield('contents')
+                <div class="container">
+
+                    @yield('contents')
+                </div>
             </main>
         </div>
         {{-- <img src="{{ Vite::asset('resources/img/picsum30.jpg') }}" alt=""> --}}
