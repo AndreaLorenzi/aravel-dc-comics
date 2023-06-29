@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('comic', function (Blueprint $table) {
+        Schema::create('comics', function (Blueprint $table) {
             $table->id();
             $table->string('title', 100);
             $table->text('description');
-            $table->string('thumb', 300);
-            $table->smallinteger('price');
+            $table->string('thumb', 1000);
+            $table->string('price',50);
             $table->string('series', 100);
             $table->string('sale_date', 20);
             $table->string('type', 20);
