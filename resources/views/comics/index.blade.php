@@ -21,7 +21,8 @@
                     </div>
                 </div>
             </div> 
-            <div class="card-body">
+            <div class="">
+                <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="card-link text-center">show</a>
                 <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST">
                     @csrf
                     @method('delete')
