@@ -22,6 +22,9 @@
                 </div>
             </div> 
             <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="card-link text-center">show</a>
+            <div class="">
+                <a class="btn btn-warning" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Edit</a>
+            </div>
         </div>
     
         @endforeach
