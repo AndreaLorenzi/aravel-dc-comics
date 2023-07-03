@@ -4,7 +4,7 @@
     <h1>Insert New Comic</h1>
 
         {{-- il metodo old() fa in modo che se si verifica un errore in un qualsiasi input il form non venga ripulito --}}
-    <form method="POST" action="{{ route('comics.store') }}">
+    <form method="POST" action="{{ route('comics.update', ['comic' => $comic->id]) }}">
         @csrf
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
@@ -74,5 +74,5 @@
             </div>
         </div>
 
-        <button class="btn btn-primary">Save</button>
+        <button class="btn btn-primary">Update</button>
     </form>
