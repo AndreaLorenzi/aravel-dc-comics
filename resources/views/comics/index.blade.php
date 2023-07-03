@@ -21,9 +21,12 @@
                     </div>
                 </div>
             </div> 
-            <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="card-link text-center">show</a>
-            <div class="">
-                <a class="btn btn-warning" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Edit</a>
+            <div class="card-body">
+                <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST">
+                    @csrf
+                    @method('delete')
+                    <button class="btn btn-danger">Delete</button>
+                </form>
             </div>
         </div>
     
